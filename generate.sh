@@ -34,7 +34,7 @@ fi
 
 # Generate a key for usage
 #echo "Generating a new SSH key - $timestamp"
-ssh-keygen -b 2048 -m PEM -N "" -f $directory/$timestamp.pem -q
+ssh-keygen -t ed25519 -m PEM -N "" -f $directory/$timestamp.pem -q
 #cat $directory/$timestamp.pem.pub
 #cp ~/.ssh/authorized_keys ~/.ssh/authorized-keys-backup-$timestamp
 cat $directory/$timestamp.pem.pub >> ~/.ssh/authorized_keys
@@ -56,6 +56,7 @@ echo | tee -a $banner
 echo "Your access key has been disabled for security reasons." | tee -a $banner
 echo "For future usage, please use the following one-time access key." | tee -a $banner
 echo "This key is valid for a single session." | tee -a $banner
+# TODO: This banner may be added to /etc/ssh/sshd_config as Banner $banner
 
 echo | tee -a $banner
 echo | tee -a $banner
