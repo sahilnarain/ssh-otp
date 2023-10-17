@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 
 directory=/tmp/temp-ssh
 timestamp=`date +%Y%m%d-%H%M%S`
@@ -34,7 +34,7 @@ fi
 
 # Generate a key for usage
 #echo "Generating a new SSH key - $timestamp"
-ssh-keygen -t ed25519 -m PEM -N "" -f $directory/$timestamp.pem -q
+ssh-keygen -t ed25519 -m PEM -N "" -f $directory/$timestamp.pem -q -C "sshotpad"
 #cat $directory/$timestamp.pem.pub
 #cp ~/.ssh/authorized_keys ~/.ssh/authorized-keys-backup-$timestamp
 cat $directory/$timestamp.pem.pub >> ~/.ssh/authorized_keys
