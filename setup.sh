@@ -17,4 +17,5 @@ chmod +x generate.sh
 if ! grep -q 'check-sshotpad.sh' ~/.bashrc; then
   echo "~/.sshotpad/check-sshotpad.sh" >> ~/.bashrc
   echo 'alias sshotpad="~/.sshotpad/generate.sh"' >> ~/.bashrc
+  source ~/.bashrc
 fi
