@@ -15,7 +15,7 @@ sshotpad is a simple tool that allows you to securely create a One Time SSH key 
 To install sshotpad, run the command
 
 ```bash
-curl -sSL https://github.com/sahilnarain/sshotpad/blob/main/setup.sh | bash
+curl -sSL https://raw.githubusercontent.com/sahilnarain/sshotpad/main/setup.sh | bash
 ```
 
 ## Usage
