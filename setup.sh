@@ -23,7 +23,7 @@ if ! grep -q 'check-sshotpad.sh' ~/.bashrc; then
   # source ~/.bashrc
 fi
 
-echo "Email: "
+echo "Enter email to receive keys: "
 read -r email
 
 sed -i "1s/^/email=$email\n/" email.sh
