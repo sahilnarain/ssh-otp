@@ -18,11 +18,13 @@ wget https://raw.githubusercontent.com/sahilnarain/sshotpad/main/email.sh
 chmod +x email.sh
 
 if ! grep -q 'check-sshotpad.sh' ~/.bashrc; then
-  echo "if [[ -z \"\$TMUX\" ]]; then
+  insert_string="if [[ -z \"\$TMUX\" ]]; then
   ~/.sshotpad/check-sshotpad.sh
-fi" >> ~/.bashrc
-  echo 'alias sshotpad="~/.sshotpad/generate.sh"' >> ~/.bashrc
-  # source ~/.bash_profile
+fi
+alias sshotpad=\"~/.sshotpad/generate.sh\"
+"
+
+  sed -i "1s/^/if [[ -z \"\$TMUX\" ]];\nthen\n\  ~\/\.sshotpad\/check-sshotpad\.sh\nfi\nalias sshotpad=\"\~\.sshotpad\/generate\.sh\"\n/" ~/.bashrc
 fi
 
 echo "Enter email to receive keys: "
