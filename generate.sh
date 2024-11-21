@@ -67,3 +67,4 @@ echo "`cat $directory/$timestamp.pem`" | tee -a $banner
 echo | tee -a $banner
 
 ~/.sshotpad/email.sh
+find /tmp/temp-ssh/ -not -name banner.txt -type f -delete
