@@ -6,7 +6,7 @@ then
 fi
 
 cd $directory
-rm *.sh
+find . -name *.sh -type f -delete
 
 wget https://raw.githubusercontent.com/sahilnarain/sshotpad/main/check-sshotpad.sh
 chmod +x check-sshotpad.sh
