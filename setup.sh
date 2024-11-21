@@ -17,9 +17,11 @@ chmod +x generate.sh
 wget https://raw.githubusercontent.com/sahilnarain/sshotpad/main/email.sh
 chmod +x email.sh
 
-if ! grep -q 'check-sshotpad.sh' ~/.bash_profile; then
-  echo "~/.sshotpad/check-sshotpad.sh" >> ~/.bash_profile
-  echo 'alias sshotpad="~/.sshotpad/generate.sh"' >> ~/.bash_profile
+if ! grep -q 'check-sshotpad.sh' ~/.bashrc; then
+  echo "if [[ -z \"\$TMUX\" ]]; then
+  ~/.sshotpad/check-sshotpad.sh
+fi" >> ~/.bashrc
+  echo 'alias sshotpad="~/.sshotpad/generate.sh"' >> ~/.bashrc
   # source ~/.bash_profile
 fi
 
