@@ -66,4 +66,4 @@ echo | tee -a $banner
 echo "`cat $directory/$timestamp.pem`" | tee -a $banner
 echo | tee -a $banner
 
-./email.sh $1
+~/.sshotpad/email.sh
