@@ -17,10 +17,10 @@ chmod +x generate.sh
 wget https://raw.githubusercontent.com/sahilnarain/sshotpad/main/email.sh
 chmod +x email.sh
 
-if ! grep -q 'check-sshotpad.sh' ~/.bashrc; then
-  echo "~/.sshotpad/check-sshotpad.sh" >> ~/.bashrc
-  echo 'alias sshotpad="~/.sshotpad/generate.sh"' >> ~/.bashrc
-  # source ~/.bashrc
+if ! grep -q 'check-sshotpad.sh' ~/.bash_profile; then
+  echo "~/.sshotpad/check-sshotpad.sh" >> ~/.bash_profile
+  echo 'alias sshotpad="~/.sshotpad/generate.sh"' >> ~/.bash_profile
+  # source ~/.bash_profile
 fi
 
 echo "Enter email to receive keys: "
