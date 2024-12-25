@@ -1,12 +1,12 @@
 #!/bin/bash
 
-directory=/tmp/temp-ssh
+directory=~/.sshotpad/tmp
 timestamp=`date +%Y%m%d-%H%M%S`
 
 # Create temporary SSH directory in /tmp
 #echo "Creating directory..."
 if [ ! -d $directory ]; then
-  mkdir $directory
+  mkdir -p $directory
 fi
 #echo
 

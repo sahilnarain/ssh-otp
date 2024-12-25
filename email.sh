@@ -1,11 +1,11 @@
-MAIL_BODY=/tmp/temp-ssh/email-body
+MAIL_BODY=~/.sshotpad/tmp/email-body
 
 if [[ -f $MAIL_BODY ]]
 then
   rm $MAIL_BODY
 fi
 
-cd /tmp/temp-ssh/
+cd ~/.sshotpad/tmp
 filename=`ls -t *.pem | head -n 1`
 cd
 
@@ -22,7 +22,7 @@ echo >> $MAIL_BODY
 echo "--boundary" >> $MAIL_BODY
 echo "Content-Disposition: attachment; filename=\"$filename\"" >> $MAIL_BODY
 echo >> $MAIL_BODY
-cat /tmp/temp-ssh/$filename >> $MAIL_BODY
+cat ~/.sshotpad/tmp/$filename >> $MAIL_BODY
 echo >> $MAIL_BODY
 echo "--boundary" >> $MAIL_BODY
 
